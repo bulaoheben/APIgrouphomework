@@ -27,9 +27,23 @@ public class UserController extends BaseController {
     //Springboot将前端的url地址中的参数名和pojo类属性名比较，如果两个
     // 名称相同，则将注入到到pojo类中对应的属性上
     @RequestMapping("reg")
-    public JsonResult<Void> reg(User user) {
+    public JsonResult<Void> reg(String username,Integer uid,String password,String salt,
+                                String phone,String email,Integer gender,String avator,
+                                Integer is_delete) {
+        User user2=new User();
+        user2.setUsername(username);
+        user2.setUid(uid);
+        user2.setPassword(password);
+        user2.setSalt(salt);
+        user2.setPhone(phone);
+        user2.setEmail(email);
+        user2.setGender(gender);
+        user2.setAvatar(avator);
+        user2.setIsDelete(is_delete);
+
+
         // 调用业务对象执行注册
-        userService.reg(user);
+        userService.reg(user2);
         // 返回
         return new JsonResult<Void>(OK);
     }
