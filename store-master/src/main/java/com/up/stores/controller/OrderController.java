@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @RestController
 @RequestMapping("orders")
@@ -25,5 +26,16 @@ public class OrderController extends BaseController {
         // 返回成功与数据
         return new JsonResult<Order>(OK, data);
     }
+
+    @RequestMapping("orderlist")
+    public JsonResult<List<Order>> orderlist(Integer oid, HttpSession session) {
+        // 从Session中取出uid和username
+        Integer uid = getuidFromSession(session);
+        // 调用业务对象执行业务
+        List<Order> data = orderService.orderlist(oid, uid);
+        // 返回成功与数据
+        return new JsonResult<List<Order>>(OK, data);
+    }
+
 }
 

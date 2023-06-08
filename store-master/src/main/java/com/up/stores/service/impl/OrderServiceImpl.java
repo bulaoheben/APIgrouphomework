@@ -100,4 +100,8 @@ public class OrderServiceImpl implements IOrderService {
     }
 
 
+    @Override
+    public List<Order> orderlist(Integer oid, Integer uid) {
+        return orderMapper.orderlist(oid,uid);
+    }
 }

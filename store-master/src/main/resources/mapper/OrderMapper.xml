@@ -26,4 +26,10 @@
         #{createdTime}, #{modifiedUser}, #{modifiedTime}
         )
     </insert>
+
+
+    <select id="orderlist" resultType="com.up.stores.entity.Order">
+        SELECT * FROM t_order WHERE oid=#{oid}
+    </select>
+
 </mapper>
