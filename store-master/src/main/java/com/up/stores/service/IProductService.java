@@ -11,4 +11,6 @@ public interface IProductService {
 
     /*根据商品id查询商品详情*/
     Product findById(Integer id);
+
+    List<Product> findByName(String name);
 }

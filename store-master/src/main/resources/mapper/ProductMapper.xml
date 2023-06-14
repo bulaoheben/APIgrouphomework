@@ -23,4 +23,17 @@
     <select id="findById" resultMap="ProductEntityMap">
         SELECT * FROM t_product WHERE id=#{id}
     </select>
+
+    <!-- 根据商品名查询商品：List<Product> findByName(String name) -->
+    <select id="findByName" resultMap="ProductEntityMap">
+        select*
+        from t_product
+<!--        where -->
+<!--        1=1-->
+<!--        <if test="title != null and title !=''">-->
+<!--            and -->
+<!--            title like concat('%', #{_parameter}, '%')-->
+<!--        </if>-->
+        where title like '%${_parameter}%'
+    </select>
 </mapper>

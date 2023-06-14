@@ -46,4 +46,10 @@ public class ProductServiceImpl implements IProductService {
         // 返回查询结果
         return product;
     }
+
+    @Override
+    public List<Product> findByName(String name) {
+        List<Product> products = productMapper.findByName(name);
+        return products;
+    }
 }

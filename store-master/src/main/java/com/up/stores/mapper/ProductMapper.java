@@ -10,4 +10,7 @@ public interface ProductMapper {
     List<Product> findHotList();
     /* 根据商品id查询商品详情*/
     Product findById(Integer id);
+
+    /* 根据商品名模糊查询商品*/
+    List<Product> findByName(String name);
 }

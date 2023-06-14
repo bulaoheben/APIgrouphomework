@@ -29,4 +29,14 @@ public class ProductController extends BaseController {
         // 返回成功和数据
         return new JsonResult<Product>(OK, data);
     }
+
+//    @GetMapping("{name}/list")
+//    public JsonResult<List<Product>> getByName(@PathVariable("name") String name) {
+@GetMapping("query")
+public JsonResult<List<Product>> getByName(String name) {
+        // 调用业务对象执行获取数据
+        List<Product> data = productService.findByName(name);
+        // 返回成功和数据
+        return new JsonResult<List<Product>>(OK, data);
+    }
 }

@@ -30,4 +30,12 @@ public class ProductMapperTests {
         Product result = productMapper.findById(id);
         System.out.println(result);
     }
+
+    @Test
+    public void findByName() {
+        List<Product> result = productMapper.findByName("联想");
+        for(int i = 0; i < result.size(); i++) {
+            System.out.println(result.get(i));
+        }
+    }
 }
