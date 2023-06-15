@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("products")
-public class ProductController extends BaseController {
+public class ProductController extends BaseController {//test
     @Autowired
     private IProductService productService;
 
