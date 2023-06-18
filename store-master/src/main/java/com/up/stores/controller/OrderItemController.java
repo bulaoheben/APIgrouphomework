@@ -12,7 +12,7 @@ import java.util.List;
 
 //订单详细信息查询
 @RestController
-@RequestMapping("orderItem")
+@RequestMapping("orderItems")
 public class OrderItemController extends BaseController {
     @Autowired
     private IOrderItemService orderItemService;
