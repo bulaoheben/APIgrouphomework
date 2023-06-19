@@ -1,4 +1,4 @@
-package com.up.stores.config;
+package com.up.stores.controller.config;
 
 import com.up.stores.interceptor.LoginInterceptor;
 import org.springframework.context.annotation.Configuration;
@@ -64,6 +64,7 @@ public class LoginInterceptorConfigurer implements WebMvcConfigurer {
         patterns.add("/districts/**");
         patterns.add("/products/**");
         patterns.add("/districts/**");
+        patterns.add("/orderItems/**");
 
         // 通过注册工具添加拦截器
         registry.addInterceptor(interceptor).addPathPatterns("/**").excludePathPatterns(patterns);
