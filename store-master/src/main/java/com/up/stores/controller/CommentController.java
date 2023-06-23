@@ -12,13 +12,13 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @RestController
-@RequestMapping("products")
+@RequestMapping("comments")
 public class CommentController extends BaseController{
     @Autowired
     private ICommentService commentService;
 
     @RequestMapping("insert")
-    public JsonResult<Void> insertComment(Comment comment){
+    public JsonResult<Void> insertComment(Comment cogirmment){
         commentService.insertComment(comment);
         return new JsonResult<Void>(OK);
     }
