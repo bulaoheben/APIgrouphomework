@@ -18,7 +18,7 @@ public class CommentController extends BaseController{
     private ICommentService commentService;
 
     @RequestMapping("insert")
-    public JsonResult<Void> insertComment(Comment cogirmment){
+    public JsonResult<Void> insertComment(Comment comment){
         commentService.insertComment(comment);
         return new JsonResult<Void>(OK);
     }
