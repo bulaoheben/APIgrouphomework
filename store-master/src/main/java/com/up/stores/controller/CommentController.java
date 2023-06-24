@@ -20,7 +20,6 @@ public class CommentController extends BaseController{
     private ICommentService commentService;
 
     @RequestMapping("insert")
-<<<<<<< HEAD
     public JsonResult<Void> insertComment(Integer uid,Integer pid, String comment_){
         Comment comment = new Comment();
         comment.setUid(uid);
@@ -28,10 +27,6 @@ public class CommentController extends BaseController{
         comment.setComment(comment_);
         comment.setCreated_time(new Date());
         commentService.addComments(comment);
-=======
-    public JsonResult<Void> insertComment(Comment comment){
-        commentService.insertComment(comment);
->>>>>>> 9d253a753c607c9e4fdd44d06eaf957fdd2e8262
         return new JsonResult<Void>(OK);
     }
 
