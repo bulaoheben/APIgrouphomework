@@ -22,9 +22,9 @@ public class CommentMapperTests {
     public void insertComment(){
         Date date = new Date();
         Comment comment = new Comment();
-        comment.setUid(5);
-        comment.setPid(9);
-        comment.setComment("testcomment");
+        comment.setUid(1);
+        comment.setPid(5);
+        comment.setComment("this is a good item");
         comment.setCreated_time(date);
         commentMapper.insertComment(comment);
     }

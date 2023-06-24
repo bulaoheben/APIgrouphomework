@@ -28,7 +28,7 @@ public class UserMapperTests {
     //测试匹配到刚注册的新用户
     @Test
     public void findByUsername() {
-        String username = "tim4";
+        String username = "tim5";
         User result = userMapper.findByUsername(username);
         System.out.println(result);
     }
@@ -36,7 +36,7 @@ public class UserMapperTests {
     //测试更新用户信息
     @Test
     public void updatePasswordByUid() {
-        userMapper.updatePasswordByUid(17,"8888","管理员",new Date());
+        userMapper.updatePasswordByUid(33,"888888","管理员",new Date());
     }
     //测试修改的信息
     @Test

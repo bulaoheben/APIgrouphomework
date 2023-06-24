@@ -13,11 +13,11 @@ public class CommentServiceImpl implements ICommentService {
     @Autowired
     private CommentMapper commentMapper;
     @Override
-    public void insertComment(Comment comment){
+    public void addComments(Comment comment){
         commentMapper.insertComment(comment);
     }
     @Override
-    public List<Comment> selectByProductId(Integer pid) {
+    public List<Comment> displayComments(Integer pid) {
         return commentMapper.selectByProductId(pid);
     }
 }
